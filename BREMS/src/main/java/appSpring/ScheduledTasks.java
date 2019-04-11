@@ -34,7 +34,7 @@ public class ScheduledTasks {
 	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("d MMM yyyy HH:mm:ss");
 
 	@SuppressWarnings("deprecation")
-	@Scheduled(fixedRate = 30000 /* TIME BEETWEEN EXECUTIONS */)
+	@Scheduled(cron = "0 0 * * * ?" /* TIME BEETWEEN EXECUTIONS */)
 	public void loanRevisor() throws MessagingException {
 		log.info("Loan revisor task iniciated {}", dateFormat.format(new Date()));
 
