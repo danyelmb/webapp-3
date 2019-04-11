@@ -39,7 +39,7 @@
                         <div class="coverItem">
                             {{#picture}}
                             <img src="/img/books/{{picture}}" class="img-responsive" /> {{/picture}} {{^picture}}
-                            <img src="/img/noPicture.png" class="img-responsive" /> {{/picture}}
+                            <img src="/img/books/resource_undefined.png" class="img-responsive" /> {{/picture}}
                         </div>
                     </div>
                     <!-- informacion del libro -->
@@ -80,7 +80,8 @@
                     <hr>
                     <h3>Similares</h3> {{#similarResources}}
                     <div class="col-xs-6 col-md-2">
-                        <a href="/book/{{id}}" class="thumbnail"> <img src="/img/books/{{picture}}" alt="..."> </a>
+                    	{{#picture}}<a href="{{id}}" class="thumbnail"> <img src="/img/books/{{picture}}" alt="..."> </a>{{/picture}}
+                    	{{^picture}}<a href="{{id}}" class="thumbnail"> <img src="/img/books/resource_undefined.png" alt="..."> </a>{{/picture}}
                     </div>
                     {{/similarResources}}
                 </div>

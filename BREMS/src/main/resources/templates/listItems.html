@@ -3,7 +3,7 @@
         <div class="coverItem">
             {{#picture}}
             <img src="img/books/{{picture}}" class="img-responsive" /> {{/picture}} {{^picture}}
-            <img src="img/noPicture.png" class="img-responsive" /> {{/picture}}
+            <img src="img/books/resource_undefined.png" class="img-responsive" /> {{/picture}}
             {{^avaiblereserve}}<a href="#" class="btn btn-notEnough">No disponible</a>{{/avaiblereserve}} {{#avaiblereserve}}
             <a href="/{{id}}/reserve" class="btn btn-reserve">Reservar</a>{{/avaiblereserve}}
         </div>
