@@ -24,7 +24,7 @@ public class TestE2EFront extends ElastestBaseTest {
 	final static Logger log = getLogger(lookup().lookupClass());
 
 	@Test
-	public void checkCreateList() {
+	public void checkShowAdminPage() {
 		// Login
 		this.goToPage("login");
 		this.loginUser("carlosv", "passc");
