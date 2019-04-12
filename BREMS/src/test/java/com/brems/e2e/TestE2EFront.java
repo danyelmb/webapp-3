@@ -35,7 +35,7 @@ public class TestE2EFront extends ElastestBaseTest {
 		// Checking if the user see admin page
 		waitUntil(ExpectedConditions.visibilityOfElementLocated(By.className("errorMessage")), "Error, the user see admin page", 5);
 		WebElement errorMessage = driver.findElement(By.className("errorMessage"));
-		assertThat(errorMessage.getText()).isEqualToIgnoringCase("ERROR: PÁGINA NO ENCONTRADA.");
+		assertThat(errorMessage.getText().toLowerCase()).contains("error:");
 		logger.info("Correct, the user don't see admin page");
 		sleep(2000);
 
@@ -108,7 +108,7 @@ public class TestE2EFront extends ElastestBaseTest {
 		// Check logout
 		waitUntil(ExpectedConditions.visibilityOfElementLocated(By.className("userDropdownMenu")), "logout failed", 5);
 		menuBarUser = driver.findElement(By.className("userDropdownMenu"));
-		assertThat(menuBarUser.getText()).isEqualToIgnoringCase("iniciar sesión");
+		assertThat(menuBarUser.getText().toLowerCase()).contains("iniciar");
 
 		log.info("Logout successful, user {}", name);
 	}
