@@ -6,7 +6,7 @@ if [ $# -ne 1 ]; then
 fi
 
 path_docker=$(pwd)
-path_project=$(dirname $(pwd))/backend
+path_project=$(dirname $(pwd))/BREMS
 path_jar=$path_project/target
 name_image=$1
 
